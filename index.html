@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="eng">
+ <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="UTF-8">
+  <title>Texts Left Unsent by homecoming.city</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/colpick.css">
+  <style type="text/css">
+  .col-xs-2 { padding: 0px; margin-right: 20px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <br />
+  <div class="container">
+    <!-- Contacts -->
+ <div id="contacts">
+   <div class="row">
+     <!-- Alignment -->
+	<div class="col-sm-offset-3 col-sm-6">
+	   <!-- Form itself -->
+          <form name="sentMessage" class="well" id="contactForm"  novalidate>
+	       <legend>The Text Left Unsent</legend>
+
+         <div class="control-group">
+             <div class="col-xs-2">
+                 <label class="radio-inline">
+                     <input type="radio" name="genderRadios" value="male" id="genderRadio"> Male
+                 </label>
+             </div>
+             <div class="col-xs-2">
+                 <label class="radio-inline">
+                     <input type="radio" name="genderRadios" value="female" id="genderRadio"> Female
+                 </label>
+             </div>
+         </div>
+
+         <div class="control-group">
+           <div class="controls">
+             <input type="text" class="form-control"
+             placeholder="What was your age then?" id="ageThen" required
+             data-validation-required-message="Please enter an age." />
+             <p class="help-block"></p>
+           </div>
+         </div>
+
+         <div class="control-group">
+           <div class="controls">
+             <input type="text" class="form-control"
+             placeholder="How old are you now?" id="ageNow" required
+             data-validation-required-message="Please enter an age." />
+             <p class="help-block"></p>
+           </div>
+         </div>
+
+         <div class="control-group">
+           <div class="controls">
+             <input type="text" class="form-control"
+             placeholder="To whom did you want to send the text?" id="toWhom" required
+             data-validation-required-message="Please enter a recipient" />
+           </div>
+         </div>
+
+<div class="control-group">
+
+         <div class="controls">
+         <div class="input-wrap">
+         	<input type="text"
+          class="jscolor {onFineChange:'onPickerChange(this)'}"
+          name="color-text"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          onchange="inputChange(this.value)"
+          onkeypress="this.onchange(this.value)"
+          onpaste="this.onchange(this.value)"
+          oninput="this.onchange(this.value)"
+          placeholder="Enter or paste a color value...">
+         </div>
+       </br>
+     </br>
+   </br>
+</div>
+</div>
+
+         <div class="control-group">
+           <div class="controls">
+             <textarea rows="10" cols="100" class="form-control"
+             placeholder="What text could you not send?" id="message" required
+             data-validation-required-message="You <i>still</i> can't send the text?" minlength="5"
+             data-validation-minlength-message="Write a <i>little</i> more, won't you?"
+             maxlength="140" style="resize:vertical"></textarea>
+           </div>
+         </div>
+
+         <div class="control-group">
+           <div class="controls">
+             <label for="inputEmail">Please enter your email address if you would like to receive updates from us.</label>
+             <input type="email" class="form-control"
+             placeholder="E-Mail Address" id="inputEmail"/>
+           </div>
+         </div>
+
+         <div id="success"> </div> <!-- For success/fail messages -->
+
+         <button type="submit" class="btn btn-success">Send</button>
+         <input type="reset" class="btn btn-default" value="Reset">
+         <br />
+
+       </form>
+
+     </div>
+   </div>
+ </div>
+</div>
+ <!-- JS FILES -->
+ <script
+   src="https://code.jquery.com/jquery-3.1.1.min.js"
+   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+   crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+   <script
+     src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+     crossorigin="anonymous"></script>
+ <script src="./js/jqBootstrapValidation.js"></script>
+ <script src="./js/form_submit.js"></script>
+ <script src="./js/scripts.js"></script>
+ <script src="./js/jscolor.js"></script>
+</body>
+</html>
