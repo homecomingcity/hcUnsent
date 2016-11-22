@@ -999,14 +999,14 @@ var jsc = {
 
 		// Color Picker options
 		//
-		this.width = 400; // width of color palette (in px)
+		this.width = 250; // width of color palette (in px)
 		this.height = 150; // height of color palette (in px)
 		this.showOnClick = true; // whether to display the color picker when user clicks on its target element
 		this.mode = 'HSV'; // HSV | HVS | HS | HV - layout of the color picker controls
-		this.position = 'right'; // left | right | top | bottom - position relative to the target element
+		this.position = 'top'; // left | right | top | bottom - position relative to the target element
 		this.smartPosition = true; // automatically change picker position when there is not enough space for it
 		this.sliderSize = 16; // px
-		this.crossSize = 8; // px
+		this.crossSize = 14; // px
 		this.closable = false; // whether to display the Close button
 		this.closeText = 'Close';
 		this.buttonColor = '#000000'; // CSS color

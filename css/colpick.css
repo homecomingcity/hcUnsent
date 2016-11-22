@@ -45,7 +45,8 @@ input[name="color-text"] {
     font-size: 13px;
     border-style: solid;
     border-width: thin;
-    border-color: #f7f7f7;
+    border-color: #999;
+    border-radius: 3px;
     background: none;
     outline: none;
     float: left;
