@@ -855,7 +855,7 @@ var jsc = {
 					break;
 				}
 			};
-			
+
 			paletteObj.elm = vmlContainer;
 			paletteObj.draw = drawFunc;
 		}
@@ -926,7 +926,7 @@ var jsc = {
 				grad.color = color1;
 				grad.color2 = color2;
 			};
-			
+
 			sliderObj.elm = vmlContainer;
 			sliderObj.draw = drawFunc;
 		}
@@ -979,7 +979,7 @@ var jsc = {
 		// General options
 		//
 		this.value = false; // initial HEX color. To change it later, use methods fromString(), fromHSV() and fromRGB()
-		this.valueElement = targetElement; // element that will be used to display and input the color code
+		this.valueElement = 'targetElement'; // element that will be used to display and input the color code
 		this.styleElement = null; // element that will preview the picked color using CSS backgroundColor
 		this.required = true; // whether the associated text <input> can be left empty
 		this.refine = true; // whether to refine the entered color code (e.g. uppercase it and remove whitespace)
@@ -999,14 +999,14 @@ var jsc = {
 
 		// Color Picker options
 		//
-		this.width = 200; // width of color palette (in px)
-		this.height = 101; // height of color palette (in px)
+		this.width = 250; // width of color palette (in px)
+		this.height = 150; // height of color palette (in px)
 		this.showOnClick = true; // whether to display the color picker when user clicks on its target element
 		this.mode = 'HSV'; // HSV | HVS | HS | HV - layout of the color picker controls
-		this.position = 'bottom'; // left | right | top | bottom - position relative to the target element
+		this.position = 'top'; // left | right | top | bottom - position relative to the target element
 		this.smartPosition = true; // automatically change picker position when there is not enough space for it
 		this.sliderSize = 16; // px
-		this.crossSize = 8; // px
+		this.crossSize = 14; // px
 		this.closable = false; // whether to display the Close button
 		this.closeText = 'Close';
 		this.buttonColor = '#000000'; // CSS color
