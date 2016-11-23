@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+* {
+    font-family: 'Share Tech Mono', monospace;
+}
+body {
+	padding-top: 30%;
+  padding-bottom: 30%;
+  background-color: #000;
+}
+
+.successbox {
+  text-align: center;
+  color: #000;
+}
+
+.typing
+{
+  display: inline-block;
+  width: 100%;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(50, end) alternate;
+    animation: type 5s steps(50, end) alternate;
+}
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0;  }
+}
+
+h2 {
+  color: lime;
+  font-size: 1.5em;
+}
+
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 1em;
+  color: lime;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: lime;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: lime;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: lime;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: lime;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: lime;
+  }
+}

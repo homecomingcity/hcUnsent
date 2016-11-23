@@ -8,31 +8,42 @@
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./css/colpick.css">
+    <link rel="stylesheet" type="text/css" href="/css/colpick.css">
 </head>
 <body>
   <br />
   <div class="container">
+    <a href="https://www.homecoming.city">
+    <object data="hclong.svg" type="image/svg+xml" class="logo">
+    <h1>homecoming.city</h1>
+    </object>
+    </a>
 	<div class="contactFormTainer">
-          <form name="sentMessage" class="well" id="contactForm"  novalidate>
+          <form
+          name="sentMessage"
+          class="well"
+          action="/bin/form_submit.php"
+          method="post"
+          id="contactForm"
+          style="text-align: center;"
+          novalidate>
 	       <legend>The Text Left Unsent</legend>
 
          <div class="control-group">
-             <div class="col-xs-2">
                  <label class="radio-inline">
-                     <input type="radio" name="genderRadios" value="male" id="genderRadio"> Male
+                     <input type="radio" name="genderRadio" value="male" id="genderRadio"> Male
                  </label>
-             </div>
-             <div class="col-xs-2">
                  <label class="radio-inline">
-                     <input type="radio" name="genderRadios" value="female" id="genderRadio"> Female
+                     <input type="radio" name="genderRadio" value="female" id="genderRadio"> Female
                  </label>
-             </div>
+                 <label class="radio-inline">
+                     <input type="radio" name="genderRadio" value="NA" id="genderRadio"> Others / Decline to State
+                 </label>
          </div>
 
          <div class="control-group">
            <div class="controls">
-             <input type="text" class="form-control"
+             <input type="number" name="ageThen" class="form-control"
              placeholder="What was your age then?" id="ageThen" required
              data-validation-required-message="Please enter an age." />
              <p class="help-block"></p>
@@ -41,7 +52,7 @@
 
          <div class="control-group">
            <div class="controls">
-             <input type="text" class="form-control"
+             <input type="number" name="ageNow" class="form-control"
              placeholder="How old are you now?" id="ageNow" required
              data-validation-required-message="Please enter an age." />
              <p class="help-block"></p>
@@ -50,7 +61,7 @@
 
          <div class="control-group">
            <div class="controls">
-             <input type="text" class="form-control"
+             <input type="text" name="toWhom" class="form-control"
              placeholder="To whom did you want to send the text?" id="toWhom" required
              data-validation-required-message="Please enter a recipient." />
            </div>
@@ -72,37 +83,35 @@
           onpaste="this.onchange(this.value)"
           oninput="this.onchange(this.value)"
           placeholder="Enter or paste a color value..."
-          id="pickedColor" required
+          id="color-text" required
           data-validation-required-message="Please select a color.">
          </div>
-       </br>
-     </br>
-    </br>
+
       </div>
         </div>
 
          <div class="control-group">
            <div class="controls">
-             <textarea rows="10" cols="100" class="form-control"
+             <textarea name="message" rows="5" cols="100" class="form-control"
              placeholder="What text could you not send?" id="message" required
              data-validation-required-message="You <i>still</i> can't send the text?" minlength="5"
              data-validation-minlength-message="Write a <i>little</i> more, won't you?"
-             maxlength="140" style="resize:vertical"></textarea>
+             maxlength="240" style="resize:vertical"></textarea>
            </div>
          </div>
 
          <div class="control-group">
            <div class="controls">
              <label for="inputEmail">Please enter your email address if you would like to receive updates from us.</label>
-             <input type="email" class="form-control"
+             <input type="email" name="inputEmail" class="form-control"
              placeholder="E-Mail Address" id="inputEmail"/>
            </div>
          </div>
 
-         <div id="success"> </div> <!-- For success/fail messages -->
-
+         <div class="submit-buttons">
          <button type="submit" class="btn btn-success">Send</button>
          <input type="reset" class="btn btn-default" value="Reset">
+       </div>
          <br />
 
        </form>
@@ -119,9 +128,9 @@
      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
      crossorigin="anonymous"></script>
- <script src="./js/jqBootstrapValidation.js"></script>
- <script src="./js/form_submit.js"></script>
- <script src="./js/scripts.js"></script>
- <script src="./js/jscolor.js"></script>
+ <script src="/js/jqBootstrapValidation.js"></script>
+ <script src="/js/form_submit.js"></script>
+ <script src="/js/scripts.js"></script>
+ <script src="/js/jscolor.js"></script>
 </body>
 </html>

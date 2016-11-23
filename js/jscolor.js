@@ -979,11 +979,11 @@ var jsc = {
 		// General options
 		//
 		this.value = false; // initial HEX color. To change it later, use methods fromString(), fromHSV() and fromRGB()
-		this.valueElement = 'targetElement'; // element that will be used to display and input the color code
+		this.valueElement = targetElement; // element that will be used to display and input the color code
 		this.styleElement = null; // element that will preview the picked color using CSS backgroundColor
 		this.required = true; // whether the associated text <input> can be left empty
 		this.refine = true; // whether to refine the entered color code (e.g. uppercase it and remove whitespace)
-		this.hash = false; // whether to prefix the HEX color code with # symbol
+		this.hash = true; // whether to prefix the HEX color code with # symbol
 		this.uppercase = true; // whether to uppercase the color code
 		this.onFineChange = null; // called instantly every time the color changes (value can be either a function or a string with javascript code)
 		this.activeClass = 'jscolor-active'; // class to be set to the target element when a picker window is open on it
@@ -999,14 +999,14 @@ var jsc = {
 
 		// Color Picker options
 		//
-		this.width = 250; // width of color palette (in px)
-		this.height = 150; // height of color palette (in px)
+		this.width = 200; // width of color palette (in px)
+		this.height = 140; // height of color palette (in px)
 		this.showOnClick = true; // whether to display the color picker when user clicks on its target element
 		this.mode = 'HSV'; // HSV | HVS | HS | HV - layout of the color picker controls
-		this.position = 'top'; // left | right | top | bottom - position relative to the target element
+		this.position = 'bottom'; // left | right | top | bottom - position relative to the target element
 		this.smartPosition = true; // automatically change picker position when there is not enough space for it
 		this.sliderSize = 16; // px
-		this.crossSize = 14; // px
+		this.crossSize = 12; // px
 		this.closable = false; // whether to display the Close button
 		this.closeText = 'Close';
 		this.buttonColor = '#000000'; // CSS color
@@ -1584,34 +1584,7 @@ var jsc = {
 			p.sldPtrS.style.width = THIS.sliderSize + 'px';
 			p.sldPtrS.style.height = sliderPtrSpace + 'px';
 
-			// the Close button
-			function setBtnBorder () {
-				var insetColors = THIS.insetColor.split(/\s+/);
-				var outsetColor = insetColors.length < 2 ? insetColors[0] : insetColors[1] + ' ' + insetColors[0] + ' ' + insetColors[0] + ' ' + insetColors[1];
-				p.btn.style.borderColor = outsetColor;
-			}
-			p.btn.style.display = THIS.closable ? 'block' : 'none';
-			p.btn.style.position = 'absolute';
-			p.btn.style.left = THIS.padding + 'px';
-			p.btn.style.bottom = THIS.padding + 'px';
-			p.btn.style.padding = '0 15px';
-			p.btn.style.height = THIS.buttonHeight + 'px';
-			p.btn.style.border = THIS.insetWidth + 'px solid';
-			setBtnBorder();
-			p.btn.style.color = THIS.buttonColor;
-			p.btn.style.font = '12px sans-serif';
-			p.btn.style.textAlign = 'center';
-			try {
-				p.btn.style.cursor = 'pointer';
-			} catch(eOldIE) {
-				p.btn.style.cursor = 'hand';
-			}
-			p.btn.onmousedown = function () {
-				THIS.hide();
-			};
-			p.btnT.style.lineHeight = THIS.buttonHeight + 'px';
-			p.btnT.innerHTML = '';
-			p.btnT.appendChild(document.createTextNode(THIS.closeText));
+
 
 			// place pointers
 			redrawPad();
