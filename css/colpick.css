@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+* {
+    font-family: 'Share Tech Mono', monospace;
+}
+body {
+	margin: 0;
+	transition: background-color 0.5s;
+}
+
+.container {
+  width: 80%;
+  margin-top: 5%;
+  max-width: 720px;
+}
+
+.logo {
+  padding-bottom: 20px;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+#contactForm {
+  width:100%;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.form-control {
+  text-align: center;
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.submit-buttons {
+  text-align: center;
+}
+
+.control-group {
+  padding: 0px;
+  margin-bottom: 15px;
+}
+
+.help-block {
+  color: #B02525;
+}
+
+.input-wrap {
+    background-color: rgba(255,255,255,0.3);
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+input[type="color"] {
+    height: 40px;
+    padding: 0;
+    border: 0;
+    margin: 5px;
+    float: left;
+}
+input[name="color-text"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 13px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #999;
+    border-radius: 3px;
+    background: none;
+    outline: none;
+    text-align: center;
+    color: black !important;
+}
+
+targetElement {
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+    color:    #666;
+}
+:-moz-placeholder {
+    color:    #666;
+}
+::-moz-placeholder {
+    color:    #666;
+}
+:-ms-input-placeholder {
+    color:    #666;
+}
