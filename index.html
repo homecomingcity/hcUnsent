@@ -4,25 +4,16 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta charset="UTF-8">
   <title>Texts Left Unsent by homecoming.city</title>
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./css/colpick.css">
-  <style type="text/css">
-  .col-xs-2 { padding: 0px; margin-right: 20px; margin-bottom: 10px; }
-  </style>
 </head>
 <body>
   <br />
   <div class="container">
-    <!-- Contacts -->
- <div id="contacts">
-   <div class="row">
-     <!-- Alignment -->
-	<div class="col-sm-offset-3 col-sm-6">
-	   <!-- Form itself -->
+	<div class="contactFormTainer">
           <form name="sentMessage" class="well" id="contactForm"  novalidate>
 	       <legend>The Text Left Unsent</legend>
 
@@ -61,13 +52,13 @@
            <div class="controls">
              <input type="text" class="form-control"
              placeholder="To whom did you want to send the text?" id="toWhom" required
-             data-validation-required-message="Please enter a recipient" />
+             data-validation-required-message="Please enter a recipient." />
            </div>
          </div>
 
-<div class="control-group">
-
+         <div class="control-group">
          <div class="controls">
+           <label for="inputEmail">Please pick a color that represents your text.</label>
          <div class="input-wrap">
          	<input type="text"
           class="jscolor {onFineChange:'onPickerChange(this)'}"
@@ -80,13 +71,15 @@
           onkeypress="this.onchange(this.value)"
           onpaste="this.onchange(this.value)"
           oninput="this.onchange(this.value)"
-          placeholder="Enter or paste a color value...">
+          placeholder="Enter or paste a color value..."
+          id="pickedColor" required
+          data-validation-required-message="Please select a color.">
          </div>
        </br>
      </br>
-   </br>
-</div>
-</div>
+    </br>
+      </div>
+        </div>
 
          <div class="control-group">
            <div class="controls">
@@ -115,8 +108,6 @@
        </form>
 
      </div>
-   </div>
- </div>
 </div>
  <!-- JS FILES -->
  <script
